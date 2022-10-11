@@ -11,38 +11,38 @@ import '@fontsource/roboto/700.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 //Material UI:
-// import { ThemeProvider, CreateTheme } from '@mui/material/styles';
-// import { red } from '@mui/material/colors';
+import { ThemeProvider,  createTheme } from '@mui/material/styles';
+import { red } from '@mui/material/colors';
 
-// const color = red[900];
+const color = red[900];
 
 
-// const customTheme = CreateTheme({
-//   //Theme settings:
-//   palette:{
-//     primary: {
-//       main: color,
-//     },
-//     secondary: {
-//       main: '#c62828',
-//     },
+const customTheme =  createTheme({
+  //Theme settings:
+  palette:{
+    primary: {
+      main: color,
+    },
+    secondary: {
+      main: '#c62828',
+    },
 
-//   }
-// })
+  }
+})
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
 <BrowserRouter>
-  {/* <ThemeProvider theme={customTheme}> */}
+  <ThemeProvider theme={customTheme}>
     <Header/>
     <Routes>
       <Route path='/' element={<HomePage/>}/>
     
     </Routes>
     <Footer/>
-  {/* </ThemeProvider> */}
+  </ThemeProvider>
 </BrowserRouter>
    
     

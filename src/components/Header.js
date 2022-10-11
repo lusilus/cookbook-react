@@ -53,6 +53,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function SearchAppBar() {
   return (
+  
     <Box sx={{ flexGrow: 1 }}  >
       <AppBar position="static" >
         <Toolbar>
@@ -65,7 +66,7 @@ export default function SearchAppBar() {
           >
             Hummus Salam
           </Typography>
-            <div className='flex justify-between gap-[12px]'>
+            <div className='flex justify-between gap-[12px] m-5'>
               <Link to='/'>
                 Home Page 
               </Link>
@@ -101,6 +102,7 @@ export default function SearchAppBar() {
         </Toolbar>
       </AppBar>
     </Box>
+   
   );
 }
 

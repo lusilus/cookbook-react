@@ -6,7 +6,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 
 export default function Footer() {
   return (
-    <div className="footer-2 bg-red-900">
+    <div className="footer-2 bg-red-900 flex ">
       <ul class="footer-links">
             <li class="footer-2-text">Privacy</li>
             <li class="footer-2-text">Terms & Condition</li>
