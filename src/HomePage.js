@@ -1,4 +1,4 @@
-
+import Test from './components/Test'
 import './App.css';
 
 
@@ -8,6 +8,7 @@ function HomePage() {
       <header className="App-header">
           hello       
       </header>
+      <Test />
     </div>
   );
 }

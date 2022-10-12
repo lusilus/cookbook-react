@@ -7,12 +7,12 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 export default function Footer() {
   return (
     <div className="footer-2 bg-red-900 flex ">
-      <ul class="footer-links">
-            <li class="footer-2-text">Privacy</li>
-            <li class="footer-2-text">Terms & Condition</li>
-            <li class="footer-2-text">Settings</li>
+      <ul className="footer-links">
+            <li className="footer-2-text">Privacy</li>
+            <li className="footer-2-text">Terms & Condition</li>
+            <li className="footer-2-text">Settings</li>
           </ul>
-          <div class="footer-social">
+          <div className="footer-social">
             <div >
               <FacebookIcon />
             </div>
