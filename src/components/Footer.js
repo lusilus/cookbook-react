@@ -23,7 +23,7 @@ export default function Footer() {
               <TwitterIcon />
            </div>
         </div>
-        <p class="copyright">Copyright © 2022 - Sadaf, Patrícia, Shir & Andrea</p>
+        <p class="copyright">Copyright © 2022 - Sadaf, Patrícia, Shir & Andrea!</p>
 
     </div>
   )
