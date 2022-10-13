@@ -1,4 +1,6 @@
 import React from 'react';
+import RecipeContextProvider from './components/context';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import HomePage from './HomePage';
@@ -8,7 +10,9 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import AddNew from './pages/AddNew';
+
+
 
 //Material UI:
 import { ThemeProvider,  createTheme } from '@mui/material/styles';
@@ -33,20 +37,20 @@ const customTheme =  createTheme({
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  
-<BrowserRouter>
-  <ThemeProvider theme={customTheme}>
-    <Header/>
-    <Routes>
-      <Route path='/' element={<HomePage/>}/>
-    
-    </Routes>
-    <Footer/>
-  </ThemeProvider>
-</BrowserRouter>
-   
-    
-  
+ <RecipeContextProvider> 
+  <BrowserRouter>
+    <ThemeProvider theme={customTheme}>
+      <Header/>
+        <Routes>
+          <Route path='/' element={<HomePage/>}/>
+          <Route path='/addNew' element={<AddNew/>}/>
+        
+        </Routes>
+      <Footer/>
+    </ThemeProvider>
+  </BrowserRouter>
+ </RecipeContextProvider>
+ 
 );
 
 
