@@ -1,4 +1,4 @@
-import * as React from 'react';
+import  { useContext, useEffect} from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -8,6 +8,9 @@ import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import {Link} from 'react-router-dom'
 import './footer&header.css'
+import { RecipeContext } from './context'
+import { client } from '../client'
+
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -52,6 +55,24 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function SearchAppBar() {
+
+const {setRecipe} = useContext(RecipeContext)
+
+useEffect(()=>{
+  const getData = async() => {
+    try {
+      const response = await client.getEntries({ content_type: 'breakfastRecipe'})
+      const responseData = response.items
+      console.log(responseData)
+     
+      setRecipe([...responseData])
+  } catch (error) {
+      console.log(error)
+  }
+
+  }
+  getData()
+},[])
   return (
   
     <Box sx={{ flexGrow: 1 }}  >
@@ -87,6 +108,9 @@ export default function SearchAppBar() {
               </Link>
               <Link to='/Kitchen hacks'>
                  Kitchen hacks 
+              </Link>
+              <Link to='/AddNew'>
+                 Add Your Recipe 
               </Link>
             </div>
 
