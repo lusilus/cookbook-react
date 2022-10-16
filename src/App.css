@@ -20,3 +20,11 @@
     transform: rotate(360deg);
   }
 }
+/* Star Rating*/
+.star-rating{
+  color: rgb(231, 231, 231);
+  font-size: 3rem;
+}
+.star-rating .star:first-child span {
+  color: rgb(255, 191, 0);
+}

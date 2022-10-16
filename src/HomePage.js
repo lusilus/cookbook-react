@@ -2,6 +2,7 @@ import Test from './components/Test'
 import './App.css';
 import { useContext } from 'react';
 import { RecipeContext } from './components/context'
+import Card from './components/Card';
 
 
 function HomePage() {
@@ -11,7 +12,8 @@ function HomePage() {
   return (
       <div>
         <p>hello from home page</p>
-          {recipe?.map((item, idx) => <div key={idx}>{item.fields.category}</div>)}
+          {recipe?.map((item, idx) => <Card key={idx} recipe={item}/> )}
+        
       </div>
   )
    
