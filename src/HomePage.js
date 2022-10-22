@@ -1,18 +1,23 @@
 import Test from './components/Test'
 import './App.css';
-import { useContext } from 'react';
+import { useContext, useReducer } from 'react';
 import { RecipeContext } from './components/context'
 import Card from './components/Card';
 
 
 function HomePage() {
+ const reducer = (state, action) => {
 
- const { recipe }= useContext(RecipeContext)
+  }
 
+const [recipes, setRecipes] = useReducer(reducer, RecipeContext)
+
+
+console.log("recipes are, ", recipes)
   return (
       <div>
         <p>hello from home page</p>
-          {recipe?.map((item, idx) => <Card key={idx} recipe={item}/> )}
+          {recipes?.map((item, idx) => <Card key={idx} recipes={item}/> )}
         
       </div>
   )

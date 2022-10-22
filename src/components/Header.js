@@ -1,4 +1,4 @@
-import  { useContext, useEffect} from 'react';
+import  { useContext, useEffect, useReducer} from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -56,7 +56,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function SearchAppBar() {
 
-const {setRecipe} = useContext(RecipeContext)
+  const reducer = (state, action) => {
+
+  }
+
+const [recipe, setRecipe] = useReducer(reducer, RecipeContext)
 
 useEffect(()=>{
   const getData = async() => {
@@ -73,6 +77,7 @@ useEffect(()=>{
   }
   getData()
 },[])
+console.log("recipe are these ", recipe)
   return (
   
     <Box sx={{ flexGrow: 1 }}  >
@@ -111,6 +116,9 @@ useEffect(()=>{
               </Link>
               <Link to='/AddNew'>
                  Add Your Recipe 
+              </Link>
+              <Link to='/EditRecipe'>
+                 Edit Your Recipe 
               </Link>
             </div>
 
