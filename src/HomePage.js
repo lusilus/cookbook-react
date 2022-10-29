@@ -7,12 +7,12 @@ import Card from './components/Card';
 
 function HomePage() {
 
- const { recipe }= useContext(RecipeContext)
-
+ const { globalRecipes }= useContext(RecipeContext)
+ console.log('test are here', globalRecipes)
   return (
       <div>
         <p>hello from home page</p>
-          {recipe?.map((item, idx) => <Card key={idx} recipe={item}/> )}
+          {globalRecipes?.post?.map((item, idx) => <Card key={idx} globalRecipes={item}/> )}
         
       </div>
   )

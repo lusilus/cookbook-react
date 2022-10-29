@@ -94,7 +94,7 @@ header {
 .menu {
     list-style-type: none;
     display: flex;
-    justify-content:start;
+
     font-family: 'Roboto', sans-serif;
     }
 
@@ -230,7 +230,7 @@ input {
 .footer-social {
     display: flex;
     flex-direction: row;
-    justify-content: end;
+  
     padding: 20px;
     font-size: 30px;
     /* width: 50px; */
@@ -412,7 +412,7 @@ input {
               .menu {
                 list-style-type: none;
                 display: flex;
-                justify-content:start;
+            
                 font-family: 'Roboto', sans-serif;
                 }
             footer {
