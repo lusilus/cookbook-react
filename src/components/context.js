@@ -1,49 +1,68 @@
-
-import { Title } from "@mui/icons-material";
-import { createContext, useContext, useReducer, useState } from "react";
-// import {useCallback, useEffect } from 'react'
-// import { client } from '../client'
+import { createContext, useState, useReducer } from "react";
+ import {useCallback, useEffect } from 'react'
+ import { client } from '../client'
 //import Test from './Test'
-
 
 export const RecipeContext = createContext();
 
 console.log(RecipeContext)
 
+ export default function Context({children}) {
+    
+   const reducer = (state, action) => {
+     switch (action.type) {
+
+       case 'FETCH_SUCCESS':
+
+
+            return {
+             
+             loading: false,
+             post: action.payload,
+             error: ''
+            }
 
 
 
+            default:
+             return state
+
+      
+  }
+ }
+
+const initialState = {
+   loading: true,
+   error: '',
+   post:{},
+
+ }
 
 
+const [globalRecipes, dispatchRecipes] = useReducer(reducer,{
+ 
+ /*   recipes:{
+        title:'',
+        ingredients:'',
+        method:'',
+        category:'',
+        cookingtime:''
+   },
+ */
+  
+
+  })
+ 
 
 
-export default function Context({children}) {
-     const reducer = (state, action) => {
-
-      }
-
-
-
-
-
+       
 //the initial value in the state needs to be the data (clean Data)
    // getData()
-   const [recipes, setRecipes] = useReducer(reducer,{
-   
-     recipe:{
-          title:'',
-          ingredients:'',
-          method:'',
-          category:'',
-          cookingtime:''
-     }
+   // const [recipes setRecipe] = useState([])
 
-    })
-    console.log('the reducer is',recipes)
-
-    return <RecipeContext.Provider value={{recipes, setRecipes}}>
+    return <RecipeContext.Provider value={{globalRecipes, dispatchRecipes}}>
 
          {children}
 
     </RecipeContext.Provider>
-}
+} 

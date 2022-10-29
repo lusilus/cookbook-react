@@ -1,4 +1,4 @@
-import  { useContext, useEffect, useReducer} from 'react';
+import  { useContext, useEffect , useReducer} from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -54,13 +54,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+
 export default function SearchAppBar() {
 
-  const reducer = (state, action) => {
+   
 
-  }
-
-const [recipe, setRecipe] = useReducer(reducer, RecipeContext)
+const {dispatchRecipes} = useContext(RecipeContext)
 
 useEffect(()=>{
   const getData = async() => {
@@ -69,7 +68,8 @@ useEffect(()=>{
       const responseData = response.items
       console.log(responseData)
      
-      setRecipe([...responseData])
+      dispatchRecipes({ type: 'FETCH_SUCCESS', payload: responseData})
+      
   } catch (error) {
       console.log(error)
   }
@@ -77,9 +77,11 @@ useEffect(()=>{
   }
   getData()
 },[])
-console.log("recipe are these ", recipe)
+
+
   return (
-  
+   
+
     <Box sx={{ flexGrow: 1 }}  >
       <AppBar position="static" >
         <Toolbar>
@@ -117,9 +119,6 @@ console.log("recipe are these ", recipe)
               <Link to='/AddNew'>
                  Add Your Recipe 
               </Link>
-              <Link to='/EditRecipe'>
-                 Edit Your Recipe 
-              </Link>
             </div>
 
           <Search>
@@ -134,13 +133,7 @@ console.log("recipe are these ", recipe)
         </Toolbar>
       </AppBar>
     </Box>
-   
+
+
   );
 }
-
-
-
-
-
-
-
