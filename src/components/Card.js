@@ -4,31 +4,39 @@ function Card({idx, recipe}) {
     const {url} = recipe.fields.url.fields.file
     const {title,cookingTime,category,ingredients, method,rating} = recipe.fields
 
-    const stars = [<span>&#9733;</span>, <span>&#9733;</span>, <span>&#9733;</span>, <span>&#9733;</span>,<span>&#9733;</span>]
+    //const stars = [<span>&#9733;</span>, <span>&#9733;</span>, <span>&#9733;</span>, <span>&#9733;</span>,<span>&#9733;</span>]
 
-/*     let starArray = ()=> {
+/*     let starArray = 
         [...Array(5)].map((star, index) => {
             index += 1;
             return (
             <span key={index}>&#9733;</span>
             );
-        })} */
+        })
+        console.log('Array is' + starArray); */
 
-
-    const starRating = stars.map(function(content) {
+    const starRating =
+/*      starArray.map(function(content) {
         // map content to html elements
         return <>{content}</>;
 
-    }).reduce(function(r, element, index) {
+    }) */
+    [...Array(5)].map((star, index) => {
+        index += 1;
+        return (
+        <span key={index}>&#9733;</span>
+        );
+    })
+    .reduce(function(r, element, index) {
         // create element groups with size 3, result looks like:
-        // [[elem1, elem2, elem3], [elem4, elem5, elem6], ...]
+        // [[elem1, elem2, elem3, elem4], [elem5], ...]
         index % rating === 0 && r.push([]);
         r[r.length - 1].push(element);
         return r;
 
-    }, []).map(function(rowContent) {
+    }, []).map(function(rowContent, index) {
         // surround every group with 'span'
-        return <span className="star">{rowContent}</span>;
+        return <span key={index} className="star">{rowContent}</span>;
     });
 
   return (

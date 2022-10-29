@@ -3,6 +3,7 @@ import './App.css';
 import { useContext } from 'react';
 import { RecipeContext } from './components/context'
 import Card from './components/Card';
+import CommunityRecipes from './components/CommunityRecipes';
 
 
 function HomePage() {
@@ -11,6 +12,8 @@ function HomePage() {
 
   return (
       <div>
+        <CommunityRecipes />
+        <p>-------------------------------------------------</p>
         <p>hello from home page</p>
           {recipe?.map((item, idx) => <Card key={idx} recipe={item}/> )}
         
