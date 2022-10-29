@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Card({idx, recipe}) {
-    const {url} = recipe.fields.url.fields.file
-    const {title,cookingTime,category,ingredients, method,rating} = recipe.fields
+function Card({idx, globalRecipes}) {
+    const {url} = globalRecipes.fields.url.fields.file
+    const {title,cookingTime,category,ingredients, method,rating} = globalRecipes.fields
 
     //const stars = [<span>&#9733;</span>, <span>&#9733;</span>, <span>&#9733;</span>, <span>&#9733;</span>,<span>&#9733;</span>]
 

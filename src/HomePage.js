@@ -1,3 +1,4 @@
+
 import Test from './components/Test'
 import './App.css';
 import { useContext } from 'react';
@@ -8,14 +9,14 @@ import CommunityRecipes from './components/CommunityRecipes';
 
 function HomePage() {
 
- const { recipe }= useContext(RecipeContext)
-
+ const { globalRecipes }= useContext(RecipeContext)
+ console.log('test are here', globalRecipes)
   return (
       <div>
         <CommunityRecipes />
         <p>-------------------------------------------------</p>
         <p>hello from home page</p>
-          {recipe?.map((item, idx) => <Card key={idx} recipe={item}/> )}
+          {globalRecipes?.post?.map((item, idx) => <Card key={idx} globalRecipes={item}/> )}
         
       </div>
   )
