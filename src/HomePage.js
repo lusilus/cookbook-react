@@ -12,9 +12,7 @@ function HomePage() {
  console.log('test are here', globalRecipes)
   return (
       <div>
-        <p>hello from home page</p>
           {globalRecipes?.post?.map((item, idx) => <Card key={idx} globalRecipes={item}/> )}
-        
       </div>
   )
    
