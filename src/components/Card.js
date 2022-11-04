@@ -35,9 +35,9 @@ function Card({idx, globalRecipes}) {
         r[r.length - 1].push(element);
         return r;
 
-    }, []).map(function(rowContent, index) {
+    }, []).map(function(rowContent, idx) {
         // surround every group with 'span'
-        return <span key={index} className="star">{rowContent}</span>;
+        return <span key={idx} className="star">{rowContent}</span>;
     });
 
   return (
@@ -46,17 +46,8 @@ function Card({idx, globalRecipes}) {
             <source srcSet={`https:${url}?w=500&h=500&fm=webp`} type="image/webp" />
             <img src={`https:${url}?w=500&h=500`} alt="" />
         </picture>
-        <br></br>
-        <div className='text-4xl font-semibold'>Cooking Time: {cookingTime} Minutes</div>
-        <br></br>
-        <div className='text-3xl font-medium'>Category:{category}</div>
-        <br></br>
-        <div className='text-3xl font-semibold'>Ingredients:</div>
-        <br></br>
-        <ul className='text-4xl'>{ingredients}</ul>
-        <br></br>
-        <div>Method:</div>
-        <div>{method}</div>
+        <h3>{title}</h3>
+        <div className="star-rating">{starRating}</div>
     </div>
   )
 }

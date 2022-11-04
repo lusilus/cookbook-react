@@ -44,3 +44,11 @@ section {
     font-size: 1.6rem;    
     padding: 1rem;                  
 }
+/* Star Rating*/
+.star-rating{
+    color: rgb(231, 231, 231);
+    font-size: 3rem;
+  }
+  .star-rating .star:first-child span {
+    color: rgb(255, 191, 0);
+  }
