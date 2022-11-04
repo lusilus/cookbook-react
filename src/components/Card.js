@@ -1,4 +1,5 @@
 import React from 'react'
+import '../CSS/Card.css'
 
 function Card({idx, globalRecipes}) {
     const {url} = globalRecipes.fields.url.fields.file
@@ -45,9 +46,20 @@ function Card({idx, globalRecipes}) {
             <source srcSet={`https:${url}?w=500&h=500&fm=webp`} type="image/webp" />
             <img src={`https:${url}?w=500&h=500`} alt="" />
         </picture>
-        <h2>{title}</h2>
+        <br></br>
+        <div className='text-4xl font-semibold'>Cooking Time: {cookingTime} Minutes</div>
+        <br></br>
+        <div className='text-3xl font-medium'>Category:{category}</div>
+        <br></br>
+        <div className='text-3xl font-semibold'>Ingredients:</div>
+        <br></br>
+        <ul className='text-4xl'>{ingredients}</ul>
+        <br></br>
+        <div>Method:</div>
+        <div>{method}</div>
     </div>
   )
 }
 
 export default Card
+

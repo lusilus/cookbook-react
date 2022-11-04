@@ -17,7 +17,6 @@ function HomePage() {
         <p>-------------------------------------------------</p>
         <p>hello from home page</p>
           {globalRecipes?.post?.map((item, idx) => <Card key={idx} globalRecipes={item}/> )}
-        
       </div>
   )
    

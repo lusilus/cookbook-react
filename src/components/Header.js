@@ -1,4 +1,7 @@
-import  { useContext, useEffect , useReducer} from 'react';
+import { useContext, useEffect , useReducer} from 'react';
+import {Link} from 'react-router-dom'
+import { RecipeContext } from './context'
+import { client } from '../client'
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -6,10 +9,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
-import {Link} from 'react-router-dom'
-import './footer&header.css'
-import { RecipeContext } from './context'
-import { client } from '../client'
+import '../CSS/Header.css'
+import logo from '../assets/logo.png'
+import menu from '../assets/menu_FILL0_wght400_GRAD0_opsz48.svg'
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -41,7 +43,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
@@ -86,42 +87,42 @@ useEffect(()=>{
       <AppBar position="static" >
         <Toolbar>
         
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            Hummus Salam
-          </Typography>
-            <div className='flex justify-between gap-[12px] m-5'>
-              <Link to='/'>
+          <div>
+            <img src={logo} alt='logo' className='logo h-[40] pr-100'/>
+          </div>
+          
+            <a>
+              <img src={menu} alt='menu' className='menuButton'/>
+            </a>
+        
+            <div className='pages flex justify-between gap-[20px] m-5 sm:column'>
+              <Link to='/' className='links hover:text-rose-900 text-2xl'>
                 Home Page 
               </Link>
-              <Link to='/Breakfast'>
+              <Link to='/Breakfast' className='pages links hover:text-rose-900 text-2xl'>
                   Breakfast 
               </Link>
-              <Link to='/Lunch'>
+              <Link to='/Lunch' className='pages links hover:text-rose-900 text-2xl'>
                   Lunch 
               </Link>
-              <Link to='/Dinner'>
+              <Link to='/Dinner' className='pages links hover:text-rose-900 text-2xl'>
                   Dinner
               </Link>
-              <Link to='/Soup'>
+              <Link to='/Soup' className='pages links hover:text-rose-900 text-2xl'>
                   Soup 
               </Link>
-              <Link to='/Sweet'>
+              <Link to='/Sweet' className='pages links hover:text-rose-900 text-2xl'>
                  Sweet 
               </Link>
-              <Link to='/Kitchen hacks'>
+              <Link to='/Kitchen hacks' className='pages links hover:text-rose-900 text-2xl'>
                  Kitchen hacks 
               </Link>
-              <Link to='/AddNew'>
+              <Link to='/AddNew' className='addNew links hover:text-rose-900 text-2xl'>
                  Add Your Recipe 
               </Link>
             </div>
 
-          <Search>
+          <Search className='searchbox'>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
