@@ -41,11 +41,16 @@ function Card({idx, globalRecipes}) {
 
   return (
     <div className="card">
+        <h2>{title}</h2>
+        <div className="star-rating">{starRating}</div>
         <picture>
             <source srcSet={`https:${url}?w=500&h=500&fm=webp`} type="image/webp" />
             <img src={`https:${url}?w=500&h=500`} alt="" />
         </picture>
-        <h2>{title}</h2>
+        <div>{cookingTime}</div>
+        <div>{category}</div>
+        <div>{ingredients}</div>
+        <div>{method}</div>
     </div>
   )
 }
