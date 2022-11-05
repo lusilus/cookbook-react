@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 import  { useContext, useEffect , useReducer} from 'react';
-=======
-import { useContext, useEffect , useReducer} from 'react';
 import {Link} from 'react-router-dom'
 import { RecipeContext } from './context'
 import { client } from '../client'
->>>>>>> f49b3d3f2db52312412ecdf2ce82ee426098c6dc
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -118,7 +114,7 @@ useEffect(()=>{
               <Link to='/Sweet' className='pages links hover:text-rose-900 text-2xl'>
                  Sweet 
               </Link>
-              <Link to='/Kitchen hacks' className='pages links hover:text-rose-900 text-2xl'>
+              <Link to='/kitchenacks' className='pages links hover:text-rose-900 text-2xl'>
                  Kitchen hacks 
               </Link>
               <Link to='/AddNew' className='addNew links hover:text-rose-900 text-2xl'>
@@ -141,8 +137,4 @@ useEffect(()=>{
 
 
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f49b3d3f2db52312412ecdf2ce82ee426098c6dc

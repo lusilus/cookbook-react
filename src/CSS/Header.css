@@ -20,6 +20,7 @@
 }
 header {
     background-color: var(--primaryColor);
+    height:100px;
 } 
 .logo {
 height:40px;
