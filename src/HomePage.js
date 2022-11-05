@@ -17,6 +17,10 @@ function HomePage() {
         <p>-------------------------------------------------</p>
         <p>hello from home page</p>
           {globalRecipes?.post?.map((item, idx) => <Card key={idx} globalRecipes={item}/> )}
+<<<<<<< HEAD
+        
+=======
+>>>>>>> f49b3d3f2db52312412ecdf2ce82ee426098c6dc
       </div>
   )
    

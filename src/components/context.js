@@ -22,6 +22,11 @@ console.log(RecipeContext)
              error: ''
             }
 
+<<<<<<< HEAD
+        case 'add':
+            return {...state, recipes:[state.recipes, action.payload] }
+=======
+>>>>>>> f49b3d3f2db52312412ecdf2ce82ee426098c6dc
 
 
             default:
@@ -31,16 +36,35 @@ console.log(RecipeContext)
   }
  }
 
+<<<<<<< HEAD
+// const initialState = {
+//    loading: true,
+//    error: '',
+//    post:{},
+
+//  }
+=======
 const initialState = {
    loading: true,
    error: '',
    post:{},
 
  }
+>>>>>>> f49b3d3f2db52312412ecdf2ce82ee426098c6dc
 
 
 const [globalRecipes, dispatchRecipes] = useReducer(reducer,{
  
+<<<<<<< HEAD
+//     recipes:{
+//         title:'',
+//         ingredients:'',
+//         method:'',
+//         category:'',
+//         cookingtime:''
+//    },
+ 
+=======
  /*   recipes:{
         title:'',
         ingredients:'',
@@ -49,6 +73,7 @@ const [globalRecipes, dispatchRecipes] = useReducer(reducer,{
         cookingtime:''
    },
  */
+>>>>>>> f49b3d3f2db52312412ecdf2ce82ee426098c6dc
   
 
   })
