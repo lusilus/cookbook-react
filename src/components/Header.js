@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 import  { useContext, useEffect , useReducer} from 'react';
-=======
-import { useContext, useEffect , useReducer} from 'react';
 import {Link} from 'react-router-dom'
 import { RecipeContext } from './context'
 import { client } from '../client'
->>>>>>> f49b3d3f2db52312412ecdf2ce82ee426098c6dc
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -92,41 +88,39 @@ useEffect(()=>{
         <Toolbar>
         
           <div>
-            <img src={logo} alt='logo' className='logo h-[40] pr-100'/>
+            <img src={logo} alt='logo' className='logo'/>
           </div>
           
             <a>
               <img src={menu} alt='menu' className='menuButton'/>
             </a>
         
-            <div className='pages flex justify-between gap-[20px] m-5 sm:column'>
-              <Link to='/' className='links hover:text-rose-900 text-2xl'>
+            <div className='pages flex justify-between gap-[20px] m-5 sm:column sm:flex sm:justify-center '>
+              <Link to='/' className='links text-2xl'>
                 Home Page 
               </Link>
-              <Link to='/Breakfast' className='pages links hover:text-rose-900 text-2xl'>
+              <Link to='/Breakfast' className='links text-2xl'>
                   Breakfast 
               </Link>
-              <Link to='/Lunch' className='pages links hover:text-rose-900 text-2xl'>
+              <Link to='/Lunch' className='links text-2xl'>
                   Lunch 
               </Link>
-              <Link to='/Dinner' className='pages links hover:text-rose-900 text-2xl'>
+              <Link to='/Dinner' className='links text-2xl'>
                   Dinner
               </Link>
-              <Link to='/Soup' className='pages links hover:text-rose-900 text-2xl'>
+              <Link to='/Soup' className='links text-2xl'>
                   Soup 
               </Link>
-              <Link to='/Sweet' className='pages links hover:text-rose-900 text-2xl'>
+              <Link to='/Sweet' className='links text-2xl'>
                  Sweet 
               </Link>
-              <Link to='/Kitchen hacks' className='pages links hover:text-rose-900 text-2xl'>
+              <Link to='/kitchenacks' className='links text-2xl'>
                  Kitchen hacks 
               </Link>
-              <Link to='/AddNew' className='addNew links hover:text-rose-900 text-2xl'>
+              <Link to='/AddNew' className='addNew text-2xl'>
                  Add Your Recipe 
               </Link>
-            </div>
-
-          <Search className='searchbox'>
+              <Search className='searchbox'>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
@@ -135,14 +129,11 @@ useEffect(()=>{
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
+            </div>
         </Toolbar>
       </AppBar>
     </Box>
 
 
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f49b3d3f2db52312412ecdf2ce82ee426098c6dc

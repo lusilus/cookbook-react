@@ -30,3 +30,21 @@ footer {
 .copyright {
     color: rgba(255, 255, 255, 0.5);
 }
+
+@media only screen and (max-width: 600px) {
+    footer {
+        height:650px;
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+        align-content:center;
+    }
+    .icons {
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-content:center;
+    }
+
+    }
+    

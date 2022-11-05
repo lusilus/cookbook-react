@@ -20,6 +20,7 @@
 }
 header {
     background-color: var(--primaryColor);
+    height:100px;
 } 
 .logo {
 height:40px;
@@ -31,8 +32,19 @@ padding-right: 100px;
 color: white;
 display:none;
 }
+.links {
+    font-size:1.5rem;
+
+}
+.links:hover {
+    color:#7C0D0E;   
+}
 .addNew {
+    font-size:1.5rem;
     padding-right:100px;
+}
+.addNew:hover {
+    color:#7C0D0E;   
 }
 
 @media only screen and (max-width: 600px) {
@@ -40,8 +52,17 @@ display:none;
 .pages {
 display: flex;
 flex-direction:column;
+justify-content:center;
+align-content:center;
+position:center;
 }
 
+header {
+    height:400px;
+}
+.searchbox {
+
+}
 .logo {
  display: none;
  }
