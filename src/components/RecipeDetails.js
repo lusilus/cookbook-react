@@ -36,7 +36,9 @@ function RecipeDetails({idx, globalRecipes}) {
         <br></br>
         <div className='text-3xl font-medium'>Category:{category}</div>
         <br></br>
-        <div className='text-3xl font-semibold'>Ingredients:</div>
+        <ul>
+            <li className='text-3xl font-semibold'>Ingredients:</li>
+        </ul>
         <br></br>
         <ul className='text-4xl'>{ingredients}</ul>
         <br></br>
