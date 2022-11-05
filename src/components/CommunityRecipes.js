@@ -5,8 +5,6 @@ import cockingLove from '../assets/cocking-love.svg'
 
 export default function CommunityRecipes({globalRecipes}) {
 
-const filteredRecipes = globalRecipes?.post?.filter(item => item).sort((a, b) => b.fields.rating - a.fields.rating )
-
   return (
     <section aria-label="Community recommendations">
     <div id="communityRecommendations" className="container">
@@ -16,7 +14,9 @@ const filteredRecipes = globalRecipes?.post?.filter(item => item).sort((a, b) =>
             <div className="slider">
                 <div className="slides">
                     <div id="slides__1" className="slide">
-                            {filteredRecipes?.map((item, idx) => {
+                            {globalRecipes?.post
+                            ?.sort((a, b) => b.fields.rating - a.fields.rating)
+                            .map((item, idx) => {
                                 if(idx < 4 ) { return <div key={idx} className="cardWrapper"><Card globalRecipes={item}/></div>}
                                 })}
                         <div className="sliderArrows">

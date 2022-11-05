@@ -18,6 +18,7 @@ import AddNew from './pages/AddNew';
 //Material UI:
 import { ThemeProvider,  createTheme } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
+import CategoryPage from './pages/CategoryPage';
 
 
 const color = red[900];
@@ -46,7 +47,7 @@ root.render(
         <Routes>
           <Route path='/' element={<HomePage/>}/>
           <Route path='/addNew' element={<AddNew/>}/>
-        
+          <Route path="/category/:name" element={<CategoryPage/>} />
         </Routes>
       <Footer/>
     </ThemeProvider>
