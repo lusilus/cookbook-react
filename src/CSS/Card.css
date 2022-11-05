@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
+* {
+    border: none;
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --primaryColor: #B11226;
+    --primaryColorHover: #9D0C1F;
+    --secondaryColor: #000;
+    --terciaryColor: #fff;
+    --backgroundColor: #F5F5F5;
+    --boxShadow: 0px 4px 20px rgba(40, 33, 26, 0.15);
+    font-family: 'Raleway', sans-serif;
+    font-size: 62.5%;
+}
+body {
+    background: var(--backgroundColor);
+}
+
+
+
+h2 {
+    font-size: 3.2rem;
+}
+
+
+
+section {
+    padding: 3rem 0;
+}
+
+.container{
+    width: calc(100vw - 4rem);
+    margin: 0 auto;
+}
+.card {
+    background-color: var(--terciaryColor);
+    box-shadow: var(--boxShadow);
+    color: var(--secondaryColor);
+    font-size: 1.6rem;    
+    padding: 1rem;                  
+}
+/* Star Rating*/
+.star-rating{
+    color: rgb(231, 231, 231);
+    font-size: 3rem;
+  }
+  .star-rating .star:first-child span {
+    color: rgb(255, 191, 0);
+  }
